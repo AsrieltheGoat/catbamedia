@@ -1,12 +1,9 @@
-var text = "Media";
-var i = 0;
-var speed = 60;
-
-function typeWriter() {
-    if (i < text.length) {
-        document.getElementById("text").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
+// change active status of navbar
+function changeActive(id) {
+    var navbar = document.getElementById("nav");
+    var links = navbar.getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+        links[i].className = "";
     }
+    document.getElementById(id).className = "active";
 }
-onload = typeWriter;
